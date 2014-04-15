@@ -1,0 +1,12 @@
+lib/*
+Console2/*
+blib/*
+inc/*
+META.*
+MYMETA.*
+Makefile
+pm_to_*
+t/db/*
+t/sqlite/*
+t/lib/*
+misc/*
