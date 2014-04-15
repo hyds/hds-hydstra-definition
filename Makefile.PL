@@ -13,11 +13,8 @@ perl_version 5.006;
 tests_recursive('t');
 
 resources (
-   #homepage   => 'http://yourwebsitehere.com',
-   #IRC        => 'irc://irc.perl.org/#Hydstra',
    license    => 'http://www.perlfoundation.org/artistic_license_2_0',
-   repository => 'git://github.com/Sholto Maud/Hydstra.git',
-   #bugtracker => 'http://rt.cpan.org/NoAuth/Bugs.html?Dist=Hydstra',
+   repository => 'git://github.com/shotlom/Hydstra.git',
 );
 
 configure_requires (
@@ -29,10 +26,13 @@ build_requires (
 );
 
 requires (
-   #'ABC'              => 1.6,
-   #'Foo::Bar::Module' => 5.0401,
+  'local::lib'        => 0.01,
+  'FindBin'           => 0.01       
 );
 
 install_as_cpan;
 auto_install;
 WriteAll;
+
+#my $gitrepo =  'git://github.com/shotlom/Hydstra.git';
+#system("cpanm $gitrepo"); 
