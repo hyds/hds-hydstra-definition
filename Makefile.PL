@@ -4,11 +4,13 @@ use warnings FATAL => 'all';
 use inc::Module::Install;
 
 name     'Hydstra';
-all_from 'lib/Hydstra.pm';
+#all_from 'lib/';
 author   q{Sholto Maud <sholto.maud@gmail.com>};
 license  'artistic2';
 
 perl_version 5.006;
+
+version 0.01;
 
 tests_recursive('t');
 
