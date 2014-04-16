@@ -207,7 +207,7 @@ no Moose;
 {
 package Hydstra::Site::Validation;
   use Moose;
-  extends 'Site';
+  extends 'Hydstra::Site';
 
  has '+site_station' => ( required => 1,  ); 
 

@@ -159,7 +159,7 @@ no Moose;
 {
 package Hydstra::Aquifer::Validation;
   use Moose;
-  extends 'Aquifer';
+  extends 'Hydstra::Aquifer';
 
  has '+aquifer_depthfrom' => ( required => 1, default => -999, ); 
  has '+aquifer_station' => ( required => 1,  ); 

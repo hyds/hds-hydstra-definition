@@ -127,7 +127,7 @@ no Moose;
 {
 package Hydstra::Gwdevel::Validation;
   use Moose;
-  extends 'Gwdevel';
+  extends 'Hydstra::Gwdevel';
 
  has '+gwdevel_method' => ( required => 1,  ); 
  has '+gwdevel_station' => ( required => 1,  ); 

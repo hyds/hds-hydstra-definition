@@ -159,7 +159,7 @@ no Moose;
 {
 package Hydstra::Sewrconf::Validation;
   use Moose;
-  extends 'Sewrconf';
+  extends 'Hydstra::Sewrconf';
 
  has '+sewrconf_date' => ( required => 1, default => 18991231, ); 
  has '+sewrconf_time' => ( required => 1, default => 1200, ); 

@@ -127,7 +127,7 @@ no Moose;
 {
 package Hydstra::Drillic::Validation;
   use Moose;
-  extends 'Drillic';
+  extends 'Hydstra::Drillic';
 
  has '+drillic_drillic' => ( required => 1,  ); 
  has '+drillic_class' => ( required => 1,  ); 

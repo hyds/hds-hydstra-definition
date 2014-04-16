@@ -124,7 +124,7 @@ no Moose;
 {
 package Hydstra::Rateper::Validation;
   use Moose;
-  extends 'Rateper';
+  extends 'Hydstra::Rateper';
 
  has '+rateper_station' => ( required => 1,  ); 
  has '+rateper_sdate' => ( required => 1,  ); 

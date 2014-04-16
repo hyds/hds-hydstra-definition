@@ -196,7 +196,7 @@ no Moose;
 {
 package Hydstra::Gaugings::Validation;
   use Moose;
-  extends 'Gaugings';
+  extends 'Hydstra::Gaugings';
 
  has '+gaugings_start_time' => ( required => 1,  ); 
  has '+gaugings_varfrom' => ( required => 1,  ); 

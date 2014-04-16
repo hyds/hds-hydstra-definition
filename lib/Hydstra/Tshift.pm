@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::Tshift::Validation;
   use Moose;
-  extends 'Tshift';
+  extends 'Hydstra::Tshift';
 
  has '+tshift_station' => ( required => 1,  ); 
  has '+tshift_sdate' => ( required => 1,  ); 

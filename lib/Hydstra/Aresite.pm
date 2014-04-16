@@ -149,7 +149,7 @@ no Moose;
 {
 package Hydstra::Aresite::Validation;
   use Moose;
-  extends 'Aresite';
+  extends 'Hydstra::Aresite';
 
  has '+aresite_station' => ( required => 1,  ); 
 

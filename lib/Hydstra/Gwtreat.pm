@@ -133,7 +133,7 @@ no Moose;
 {
 package Hydstra::Gwtreat::Validation;
   use Moose;
-  extends 'Gwtreat';
+  extends 'Hydstra::Gwtreat';
 
  has '+gwtreat_treatdate' => ( required => 1,  ); 
  has '+gwtreat_station' => ( required => 1,  ); 

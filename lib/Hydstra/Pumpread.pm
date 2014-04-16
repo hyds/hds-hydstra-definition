@@ -135,7 +135,7 @@ no Moose;
 {
 package Hydstra::Pumpread::Validation;
   use Moose;
-  extends 'Pumpread';
+  extends 'Hydstra::Pumpread';
 
  has '+pumpread_cumdurat' => ( required => 1, default => 0, ); 
  has '+pumpread_pipe' => ( required => 1, default => 1, ); 

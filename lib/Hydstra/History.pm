@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::History::Validation;
   use Moose;
-  extends 'History';
+  extends 'Hydstra::History';
 
  has '+history_keyword' => ( required => 1,  ); 
  has '+history_station' => ( required => 1,  ); 

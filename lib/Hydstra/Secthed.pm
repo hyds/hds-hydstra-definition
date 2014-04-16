@@ -142,7 +142,7 @@ no Moose;
 {
 package Hydstra::Secthed::Validation;
   use Moose;
-  extends 'Secthed';
+  extends 'Hydstra::Secthed';
 
  has '+secthed_date' => (  default => 18991231, ); 
  has '+secthed_sectno' => ( required => 1,  ); 

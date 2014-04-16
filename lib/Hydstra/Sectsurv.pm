@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::Sectsurv::Validation;
   use Moose;
-  extends 'Sectsurv';
+  extends 'Hydstra::Sectsurv';
 
  has '+sectsurv_station' => ( required => 1,  ); 
  has '+sectsurv_year' => ( required => 1,  ); 

@@ -133,7 +133,7 @@ no Moose;
 {
 package Hydstra::Drilling::Validation;
   use Moose;
-  extends 'Drilling';
+  extends 'Hydstra::Drilling';
 
  has '+drilling_depthfrom' => ( required => 1, default => -999, ); 
  has '+drilling_station' => ( required => 1,  ); 

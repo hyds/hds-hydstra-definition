@@ -161,7 +161,7 @@ no Moose;
 {
 package Hydstra::Lithgeo::Validation;
   use Moose;
-  extends 'Lithgeo';
+  extends 'Hydstra::Lithgeo';
 
  has '+lithgeo_date' => (  default => 18991231, ); 
  has '+lithgeo_interpret' => ( required => 1,  ); 

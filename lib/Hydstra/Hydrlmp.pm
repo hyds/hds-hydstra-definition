@@ -141,7 +141,7 @@ no Moose;
 {
 package Hydstra::Hydrlmp::Validation;
   use Moose;
-  extends 'Hydrlmp';
+  extends 'Hydstra::Hydrlmp';
 
  has '+hydrlmp_time' => ( required => 1, default => 1200, ); 
  has '+hydrlmp_date' => ( required => 1, default => 18991231, ); 

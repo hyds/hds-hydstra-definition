@@ -201,7 +201,7 @@ no Moose;
 {
 package Hydstra::Casing::Validation;
   use Moose;
-  extends 'Casing';
+  extends 'Hydstra::Casing';
 
  has '+casing_pipe' => ( required => 1, default => 1, ); 
  has '+casing_depthfrom' => ( required => 1, default => -999, ); 

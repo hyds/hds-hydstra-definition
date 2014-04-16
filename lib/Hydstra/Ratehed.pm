@@ -132,7 +132,7 @@ no Moose;
 {
 package Hydstra::Ratehed::Validation;
   use Moose;
-  extends 'Ratehed';
+  extends 'Hydstra::Ratehed';
 
  has '+ratehed_table' => ( required => 1,  ); 
  has '+ratehed_varfrom' => ( required => 1,  ); 

@@ -135,7 +135,7 @@ no Moose;
 {
 package Hydstra::Artflows::Validation;
   use Moose;
-  extends 'Artflows';
+  extends 'Hydstra::Artflows';
 
  has '+artflows_time' => ( required => 1, default => 1200, ); 
  has '+artflows_date' => ( required => 1, default => 18991231, ); 

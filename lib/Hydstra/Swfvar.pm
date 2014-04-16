@@ -143,7 +143,7 @@ no Moose;
 {
 package Hydstra::Swfvar::Validation;
   use Moose;
-  extends 'Swfvar';
+  extends 'Hydstra::Swfvar';
 
  has '+swfvar_variable' => ( required => 1,  ); 
  has '+swfvar_statdate' => ( required => 1,  ); 

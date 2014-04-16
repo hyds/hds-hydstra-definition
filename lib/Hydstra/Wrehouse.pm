@@ -169,7 +169,7 @@ no Moose;
 {
 package Hydstra::Wrehouse::Validation;
   use Moose;
-  extends 'Wrehouse';
+  extends 'Hydstra::Wrehouse';
 
  has '+wrehouse_date' => ( required => 1, default => 18991231, ); 
  has '+wrehouse_variable' => ( required => 1,  ); 

@@ -129,7 +129,7 @@ no Moose;
 {
 package Hydstra::Resextr::Validation;
   use Moose;
-  extends 'Resextr';
+  extends 'Hydstra::Resextr';
 
  has '+resextr_variable' => ( required => 1,  ); 
  has '+resextr_fieldname' => ( required => 1,  ); 

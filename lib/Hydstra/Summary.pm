@@ -117,7 +117,7 @@ no Moose;
 {
 package Hydstra::Summary::Validation;
   use Moose;
-  extends 'Summary';
+  extends 'Hydstra::Summary';
 
  has '+summary_station' => ( required => 1,  ); 
  has '+summary_variable' => ( required => 1,  ); 

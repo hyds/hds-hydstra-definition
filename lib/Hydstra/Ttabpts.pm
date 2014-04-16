@@ -119,7 +119,7 @@ no Moose;
 {
 package Hydstra::Ttabpts::Validation;
   use Moose;
-  extends 'Ttabpts';
+  extends 'Hydstra::Ttabpts';
 
  has '+ttabpts_station' => ( required => 1,  ); 
  has '+ttabpts_variable' => ( required => 1,  ); 

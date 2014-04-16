@@ -141,7 +141,7 @@ no Moose;
 {
 package Hydstra::Swfhist::Validation;
   use Moose;
-  extends 'Swfhist';
+  extends 'Hydstra::Swfhist';
 
  has '+swfhist_statdate' => ( required => 1,  ); 
  has '+swfhist_station' => ( required => 1,  ); 

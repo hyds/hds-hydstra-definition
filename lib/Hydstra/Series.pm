@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::Series::Validation;
   use Moose;
-  extends 'Series';
+  extends 'Hydstra::Series';
 
  has '+series_station' => ( required => 1,  ); 
  has '+series_date' => ( required => 1, default => 18991231, ); 

@@ -150,7 +150,7 @@ no Moose;
 {
 package Hydstra::Station::Validation;
   use Moose;
-  extends 'Station';
+  extends 'Hydstra::Station';
 
  has '+station_station' => ( required => 1,  ); 
 

@@ -123,7 +123,7 @@ no Moose;
 {
 package Hydstra::Gaugmeas::Validation;
   use Moose;
-  extends 'Gaugmeas';
+  extends 'Hydstra::Gaugmeas';
 
  has '+gaugmeas_variable' => ( required => 1,  ); 
  has '+gaugmeas_varfrom' => ( required => 1,  ); 

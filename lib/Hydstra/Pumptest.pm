@@ -182,7 +182,7 @@ no Moose;
 {
 package Hydstra::Pumptest::Validation;
   use Moose;
-  extends 'Pumptest';
+  extends 'Hydstra::Pumptest';
 
  has '+pumptest_pipe' => ( required => 1, default => 1, ); 
  has '+pumptest_starttime' => ( required => 1, default => 0, ); 

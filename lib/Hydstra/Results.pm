@@ -141,7 +141,7 @@ no Moose;
 {
 package Hydstra::Results::Validation;
   use Moose;
-  extends 'Results';
+  extends 'Hydstra::Results';
 
  has '+results_variable' => ( required => 1,  ); 
  has '+results_bottle' => ( required => 1, default => 1, ); 

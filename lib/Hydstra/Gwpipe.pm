@@ -134,7 +134,7 @@ no Moose;
 {
 package Hydstra::Gwpipe::Validation;
   use Moose;
-  extends 'Gwpipe';
+  extends 'Hydstra::Gwpipe';
 
  has '+gwpipe_pipe' => ( required => 1, default => 1, ); 
  has '+gwpipe_purpose' => (  default => 'oth', ); 

@@ -136,7 +136,7 @@ no Moose;
 {
 package Hydstra::Resdflt::Validation;
   use Moose;
-  extends 'Resdflt';
+  extends 'Hydstra::Resdflt';
 
  has '+resdflt_variable' => ( required => 1,  ); 
  has '+resdflt_fileformat' => ( required => 1,  ); 

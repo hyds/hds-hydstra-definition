@@ -147,7 +147,7 @@ no Moose;
 {
 package Hydstra::Insthist::Validation;
   use Moose;
-  extends 'Insthist';
+  extends 'Hydstra::Insthist';
 
  has '+insthist_datein' => ( required => 1,  ); 
  has '+insthist_model' => ( required => 1,  ); 

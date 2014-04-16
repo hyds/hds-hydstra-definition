@@ -135,7 +135,7 @@ no Moose;
 {
 package Hydstra::Drilexam::Validation;
   use Moose;
-  extends 'Drilexam';
+  extends 'Hydstra::Drilexam';
 
  has '+drilexam_drillic' => ( required => 1,  ); 
  has '+drilexam_borelic' => ( required => 1,  ); 

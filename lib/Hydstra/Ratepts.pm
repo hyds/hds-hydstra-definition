@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::Ratepts::Validation;
   use Moose;
-  extends 'Ratepts';
+  extends 'Hydstra::Ratepts';
 
  has '+ratepts_station' => ( required => 1,  ); 
  has '+ratepts_stage' => ( required => 1,  ); 

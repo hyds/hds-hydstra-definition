@@ -145,7 +145,7 @@ no Moose;
 {
 package Hydstra::Hydmeas::Validation;
   use Moose;
-  extends 'Hydmeas';
+  extends 'Hydstra::Hydmeas';
 
  has '+hydmeas_variable' => ( required => 1,  ); 
  has '+hydmeas_time' => ( required => 1, default => 1200, ); 

@@ -121,7 +121,7 @@ no Moose;
 {
 package Hydstra::Drilexp::Validation;
   use Moose;
-  extends 'Drilexp';
+  extends 'Hydstra::Drilexp';
 
  has '+drilexp_drillic' => ( required => 1,  ); 
  has '+drilexp_state' => ( required => 1,  ); 

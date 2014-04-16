@@ -159,7 +159,7 @@ no Moose;
 {
 package Hydstra::Gravel::Validation;
   use Moose;
-  extends 'Gravel';
+  extends 'Hydstra::Gravel';
 
  has '+gravel_depthfrom' => ( required => 1, default => -999, ); 
  has '+gravel_outdiam' => (  default => -999, ); 

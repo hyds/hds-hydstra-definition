@@ -117,7 +117,7 @@ no Moose;
 {
 package Hydstra::Sections::Validation;
   use Moose;
-  extends 'Sections';
+  extends 'Hydstra::Sections';
 
  has '+sections_station' => ( required => 1,  ); 
  has '+sections_order' => ( required => 1,  ); 

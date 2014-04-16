@@ -167,7 +167,7 @@ no Moose;
 {
 package Hydstra::Areasmt::Validation;
   use Moose;
-  extends 'Areasmt';
+  extends 'Hydstra::Areasmt';
 
  has '+areasmt_date' => ( required => 1, default => 18991231, ); 
  has '+areasmt_assesstype' => ( required => 1,  ); 

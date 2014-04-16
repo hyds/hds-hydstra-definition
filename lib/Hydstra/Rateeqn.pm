@@ -123,7 +123,7 @@ no Moose;
 {
 package Hydstra::Rateeqn::Validation;
   use Moose;
-  extends 'Rateeqn';
+  extends 'Hydstra::Rateeqn';
 
  has '+rateeqn_stagelow' => ( required => 1,  ); 
  has '+rateeqn_table' => ( required => 1,  ); 

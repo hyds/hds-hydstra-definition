@@ -119,7 +119,7 @@ no Moose;
 {
 package Hydstra::Nrstn::Validation;
   use Moose;
-  extends 'Nrstn';
+  extends 'Hydstra::Nrstn';
 
  has '+nrstn_station' => ( required => 1,  ); 
  has '+nrstn_region' => ( required => 1,  ); 

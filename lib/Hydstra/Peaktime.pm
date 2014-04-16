@@ -130,7 +130,7 @@ no Moose;
 {
 package Hydstra::Peaktime::Validation;
   use Moose;
-  extends 'Peaktime';
+  extends 'Hydstra::Peaktime';
 
  has '+peaktime_peaktype' => ( required => 1,  ); 
  has '+peaktime_varfrom' => ( required => 1,  ); 

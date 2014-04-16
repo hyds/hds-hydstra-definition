@@ -172,7 +172,7 @@ no Moose;
 {
 package Hydstra::Samples::Validation;
   use Moose;
-  extends 'Samples';
+  extends 'Hydstra::Samples';
 
  has '+samples_date' => (  default => 18991231, ); 
  has '+samples_bottle' => ( required => 1, default => 1, ); 

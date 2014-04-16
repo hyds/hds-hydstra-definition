@@ -119,7 +119,7 @@ no Moose;
 {
 package Hydstra::Stnini::Validation;
   use Moose;
-  extends 'Stnini';
+  extends 'Hydstra::Stnini';
 
  has '+stnini_keyword' => ( required => 1,  ); 
  has '+stnini_station' => ( required => 1,  ); 

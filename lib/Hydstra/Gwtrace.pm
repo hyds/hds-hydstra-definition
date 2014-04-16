@@ -134,7 +134,7 @@ no Moose;
 {
 package Hydstra::Gwtrace::Validation;
   use Moose;
-  extends 'Gwtrace';
+  extends 'Hydstra::Gwtrace';
 
  has '+gwtrace_time' => ( required => 1, default => 1200, ); 
  has '+gwtrace_date' => ( required => 1, default => 18991231, ); 

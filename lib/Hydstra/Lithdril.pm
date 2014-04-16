@@ -131,7 +131,7 @@ no Moose;
 {
 package Hydstra::Lithdril::Validation;
   use Moose;
-  extends 'Lithdril';
+  extends 'Hydstra::Lithdril';
 
  has '+lithdril_interpret' => ( required => 1,  ); 
  has '+lithdril_depthfrom' => ( required => 1, default => -999, ); 

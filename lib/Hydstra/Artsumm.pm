@@ -170,7 +170,7 @@ no Moose;
 {
 package Hydstra::Artsumm::Validation;
   use Moose;
-  extends 'Artsumm';
+  extends 'Hydstra::Artsumm';
 
  has '+artsumm_date' => ( required => 1, default => 18991231, ); 
  has '+artsumm_pipe' => ( required => 1, default => 1, ); 

@@ -177,7 +177,7 @@ no Moose;
 {
 package Hydstra::Sampdflt::Validation;
   use Moose;
-  extends 'Sampdflt';
+  extends 'Hydstra::Sampdflt';
 
  has '+sampdflt_date' => (  default => 18991231, ); 
  has '+sampdflt_bottle' => (  default => 1, ); 

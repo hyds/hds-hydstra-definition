@@ -127,7 +127,7 @@ no Moose;
 {
 package Hydstra::Drilhist::Validation;
   use Moose;
-  extends 'Drilhist';
+  extends 'Hydstra::Drilhist';
 
  has '+drilhist_keyword' => ( required => 1,  ); 
  has '+drilhist_time' => ( required => 1, default => 1200, ); 

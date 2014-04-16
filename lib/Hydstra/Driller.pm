@@ -207,7 +207,7 @@ no Moose;
 {
 package Hydstra::Driller::Validation;
   use Moose;
-  extends 'Driller';
+  extends 'Hydstra::Driller';
 
  has '+driller_drillic' => ( required => 1,  ); 
 

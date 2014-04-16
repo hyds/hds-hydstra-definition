@@ -137,7 +137,7 @@ no Moose;
 {
 package Hydstra::Bench::Validation;
   use Moose;
-  extends 'Bench';
+  extends 'Hydstra::Bench';
 
  has '+bench_bdate' => ( required => 1,  ); 
  has '+bench_bench' => ( required => 1,  ); 

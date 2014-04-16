@@ -123,7 +123,7 @@ no Moose;
 {
 package Hydstra::Gwtracer::Validation;
   use Moose;
-  extends 'Gwtracer';
+  extends 'Hydstra::Gwtracer';
 
  has '+gwtracer_variable' => ( required => 1,  ); 
  has '+gwtracer_time' => ( required => 1, default => 1200, ); 

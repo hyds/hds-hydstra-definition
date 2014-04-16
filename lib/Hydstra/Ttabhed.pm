@@ -114,7 +114,7 @@ no Moose;
 {
 package Hydstra::Ttabhed::Validation;
   use Moose;
-  extends 'Ttabhed';
+  extends 'Hydstra::Ttabhed';
 
  has '+ttabhed_station' => ( required => 1,  ); 
  has '+ttabhed_variable' => ( required => 1,  ); 

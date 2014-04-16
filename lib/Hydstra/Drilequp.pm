@@ -123,7 +123,7 @@ no Moose;
 {
 package Hydstra::Drilequp::Validation;
   use Moose;
-  extends 'Drilequp';
+  extends 'Hydstra::Drilequp';
 
  has '+drilequp_drillic' => ( required => 1,  ); 
  has '+drilequp_equipment' => ( required => 1,  ); 

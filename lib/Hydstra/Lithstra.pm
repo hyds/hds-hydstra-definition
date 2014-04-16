@@ -143,7 +143,7 @@ no Moose;
 {
 package Hydstra::Lithstra::Validation;
   use Moose;
-  extends 'Lithstra';
+  extends 'Hydstra::Lithstra';
 
  has '+lithstra_date' => (  default => 18991231, ); 
  has '+lithstra_time' => (  default => 1200, ); 

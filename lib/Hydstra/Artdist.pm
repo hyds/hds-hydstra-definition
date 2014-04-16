@@ -139,7 +139,7 @@ no Moose;
 {
 package Hydstra::Artdist::Validation;
   use Moose;
-  extends 'Artdist';
+  extends 'Hydstra::Artdist';
 
  has '+artdist_time' => ( required => 1, default => 1200, ); 
  has '+artdist_date' => ( required => 1, default => 18991231, ); 

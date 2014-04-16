@@ -123,7 +123,7 @@ no Moose;
 {
 package Hydstra::Drilslic::Validation;
   use Moose;
-  extends 'Drilslic';
+  extends 'Hydstra::Drilslic';
 
  has '+drilslic_drillic' => ( required => 1,  ); 
  has '+drilslic_state' => ( required => 1,  ); 

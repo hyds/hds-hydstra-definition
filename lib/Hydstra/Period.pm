@@ -143,7 +143,7 @@ no Moose;
 {
 package Hydstra::Period::Validation;
   use Moose;
-  extends 'Period';
+  extends 'Hydstra::Period';
 
  has '+period_variable' => ( required => 1,  ); 
  has '+period_varfrom' => ( required => 1,  ); 

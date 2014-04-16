@@ -131,7 +131,7 @@ no Moose;
 {
 package Hydstra::Artpress::Validation;
   use Moose;
-  extends 'Artpress';
+  extends 'Hydstra::Artpress';
 
  has '+artpress_time' => ( required => 1, default => 1200, ); 
  has '+artpress_date' => ( required => 1, default => 18991231, ); 

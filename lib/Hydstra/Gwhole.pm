@@ -210,7 +210,7 @@ no Moose;
 {
 package Hydstra::Gwhole::Validation;
   use Moose;
-  extends 'Gwhole';
+  extends 'Hydstra::Gwhole';
 
  has '+gwhole_station' => ( required => 1,  ); 
  has '+gwhole_hole' => ( required => 1, default => 1, ); 

@@ -131,7 +131,7 @@ no Moose;
 {
 package Hydstra::Swfparm::Validation;
   use Moose;
-  extends 'Swfparm';
+  extends 'Hydstra::Swfparm';
 
  has '+swfparm_station' => ( required => 1,  ); 
  has '+swfparm_parameter' => ( required => 1,  ); 

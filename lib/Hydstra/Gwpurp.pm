@@ -127,7 +127,7 @@ no Moose;
 {
 package Hydstra::Gwpurp::Validation;
   use Moose;
-  extends 'Gwpurp';
+  extends 'Hydstra::Gwpurp';
 
  has '+gwpurp_date' => ( required => 1, default => 18991231, ); 
  has '+gwpurp_purpose' => ( required => 1, default => 'oth', ); 

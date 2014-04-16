@@ -224,7 +224,7 @@ no Moose;
 {
 package Hydstra::Swfsite::Validation;
   use Moose;
-  extends 'Swfsite';
+  extends 'Hydstra::Swfsite';
 
  has '+swfsite_station' => ( required => 1,  ); 
 

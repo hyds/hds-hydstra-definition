@@ -135,7 +135,7 @@ no Moose;
 {
 package Hydstra::Drilapp::Validation;
   use Moose;
-  extends 'Drilapp';
+  extends 'Hydstra::Drilapp';
 
  has '+drilapp_drillic' => ( required => 1,  ); 
  has '+drilapp_appldate' => ( required => 1,  ); 

@@ -150,7 +150,7 @@ no Moose;
 {
 package Hydstra::Sewrsite::Validation;
   use Moose;
-  extends 'Sewrsite';
+  extends 'Hydstra::Sewrsite';
 
  has '+sewrsite_station' => ( required => 1,  ); 
 

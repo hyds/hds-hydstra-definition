@@ -125,7 +125,7 @@ no Moose;
 {
 package Hydstra::Sampextr::Validation;
   use Moose;
-  extends 'Sampextr';
+  extends 'Hydstra::Sampextr';
 
  has '+sampextr_fieldname' => ( required => 1,  ); 
  has '+sampextr_fileformat' => ( required => 1,  ); 
