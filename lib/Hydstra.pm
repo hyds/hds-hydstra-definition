@@ -1,6 +1,6 @@
+
 {
 package Hydstra;
-use 5.006;
 use Moose;
 use Hydstra::Stnini;
   use Hydstra::Wrehouse;
