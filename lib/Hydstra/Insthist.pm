@@ -115,7 +115,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS INSTHIST ( Make TEXT,  Model TEXT,  Serial TEXT,  Datein TEXT,  Timein NUMERIC,  Station TEXT,  Reason TEXT,  Text TEXT,  Latitude NUMERIC,  Longitude NUMERIC,  Elev NUMERIC,  Rangelo NUMERIC,  Rangehi NUMERIC,  Rangeucode TEXT,  Tolerance NUMERIC,  Tolucode TEXT,  Variable NUMERIC,  Datatrans NUMERIC,  Visitstage TEXT,  Ipaddress TEXT,  Subnetmask TEXT,  Dbver28 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Make, Model, Serial, Datein, Timein))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS INSTHIST ( 'Make' TEXT,  'Model' TEXT,  'Serial' TEXT,  'Datein' TEXT,  'Timein' NUMERIC,  'Station' TEXT,  'Reason' TEXT,  'Text' TEXT,  'Latitude' NUMERIC,  'Longitude' NUMERIC,  'Elev' NUMERIC,  'Rangelo' NUMERIC,  'Rangehi' NUMERIC,  'Rangeucode' TEXT,  'Tolerance' NUMERIC,  'Tolucode' TEXT,  'Variable' NUMERIC,  'Datatrans' NUMERIC,  'Visitstage' TEXT,  'Ipaddress' TEXT,  'Subnetmask' TEXT,  'Dbver28' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Make, Model, Serial, Datein, Timein))";
   return $sql_statement;
 }
 

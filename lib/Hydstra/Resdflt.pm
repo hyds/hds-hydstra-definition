@@ -104,7 +104,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS RESDFLT ( Fileformat TEXT,  Variable NUMERIC,  Method TEXT,  Accuracy NUMERIC,  Value NUMERIC,  Flag TEXT,  Quality NUMERIC,  Lolimit NUMERIC,  Uplimit NUMERIC,  Make TEXT,  Model TEXT,  Serial TEXT,  Commnt TEXT,  Spare1 TEXT,  Spare2 TEXT,  Dbver19 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Fileformat, Variable))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS RESDFLT ( 'Fileformat' TEXT,  'Variable' NUMERIC,  'Method' TEXT,  'Accuracy' NUMERIC,  'Value' NUMERIC,  'Flag' TEXT,  'Quality' NUMERIC,  'Lolimit' NUMERIC,  'Uplimit' NUMERIC,  'Make' TEXT,  'Model' TEXT,  'Serial' TEXT,  'Commnt' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Dbver19' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Fileformat, Variable))";
   return $sql_statement;
 }
 

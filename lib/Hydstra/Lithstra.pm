@@ -111,7 +111,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS LITHSTRA ( Station TEXT,  Hole NUMERIC,  Interpret TEXT,  Depthfrom NUMERIC,  Depthto NUMERIC,  Date TEXT,  Time NUMERIC,  Person TEXT,  Source TEXT,  Hgunumber NUMERIC,  Geoprov TEXT,  Formation TEXT,  Group TEXT,  Endmarker NUMERIC,  Comments TEXT,  Verified NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver26 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Interpret, Depthfrom))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS LITHSTRA ( 'Station' TEXT,  'Hole' NUMERIC,  'Interpret' TEXT,  'Depthfrom' NUMERIC,  'Depthto' NUMERIC,  'Date' TEXT,  'Time' NUMERIC,  'Person' TEXT,  'Source' TEXT,  'Hgunumber' NUMERIC,  'Geoprov' TEXT,  'Formation' TEXT,  'Group' TEXT,  'Endmarker' NUMERIC,  'Comments' TEXT,  'Verified' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver26' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Interpret, Depthfrom))";
   return $sql_statement;
 }
 

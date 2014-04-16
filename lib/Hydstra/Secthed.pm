@@ -110,7 +110,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SECTHED ( Station TEXT,  Sectno TEXT,  Stype TEXT,  Section NUMERIC,  Letter TEXT,  Date TEXT,  Srun NUMERIC,  Enteredby TEXT,  Checkedby TEXT,  Levelbook TEXT,  Comment TEXT,  Gaugezero NUMERIC,  Datum TEXT,  Unitcode TEXT,  Start_lat NUMERIC,  Start_long NUMERIC,  End_lat NUMERIC,  End_long NUMERIC,  Dbver18 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Sectno))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SECTHED ( 'Station' TEXT,  'Sectno' TEXT,  'Stype' TEXT,  'Section' NUMERIC,  'Letter' TEXT,  'Date' TEXT,  'Srun' NUMERIC,  'Enteredby' TEXT,  'Checkedby' TEXT,  'Levelbook' TEXT,  'Comment' TEXT,  'Gaugezero' NUMERIC,  'Datum' TEXT,  'Unitcode' TEXT,  'Start_lat' NUMERIC,  'Start_long' NUMERIC,  'End_lat' NUMERIC,  'End_long' NUMERIC,  'Dbver18' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Sectno))";
   return $sql_statement;
 }
 

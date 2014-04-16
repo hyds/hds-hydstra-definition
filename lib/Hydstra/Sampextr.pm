@@ -93,7 +93,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SAMPEXTR ( Fileformat TEXT,  Fieldname TEXT,  Numeric NUMERIC,  Fixed NUMERIC,  Position NUMERIC,  Length NUMERIC,  Delimiter TEXT,  Template TEXT,  Validation TEXT,  Invalidact TEXT,  Dbver11 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Fileformat, Fieldname))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SAMPEXTR ( 'Fileformat' TEXT,  'Fieldname' TEXT,  'Numeric' NUMERIC,  'Fixed' NUMERIC,  'Position' NUMERIC,  'Length' NUMERIC,  'Delimiter' TEXT,  'Template' TEXT,  'Validation' TEXT,  'Invalidact' TEXT,  'Dbver11' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Fileformat, Fieldname))";
   return $sql_statement;
 }
 

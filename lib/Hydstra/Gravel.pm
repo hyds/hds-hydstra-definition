@@ -127,7 +127,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS GRAVEL ( Station TEXT,  Hole NUMERIC,  Depthfrom NUMERIC,  Depthto NUMERIC,  Rectype TEXT,  Type TEXT,  Insdiam NUMERIC,  Outdiam NUMERIC,  Anultype TEXT,  Anuliinter NUMERIC,  Anulgrad TEXT,  Sizefrom NUMERIC,  Sizeto NUMERIC,  Quantity NUMERIC,  Waterused NUMERIC,  Cementused NUMERIC,  Insertmeth TEXT,  Shovannul NUMERIC,  Tremiepipe NUMERIC,  Revcirc NUMERIC,  Status TEXT,  Statusdate TEXT,  Statustime NUMERIC,  Party TEXT,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver30 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Depthfrom, Depthto))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS GRAVEL ( 'Station' TEXT,  'Hole' NUMERIC,  'Depthfrom' NUMERIC,  'Depthto' NUMERIC,  'Rectype' TEXT,  'Type' TEXT,  'Insdiam' NUMERIC,  'Outdiam' NUMERIC,  'Anultype' TEXT,  'Anuliinter' NUMERIC,  'Anulgrad' TEXT,  'Sizefrom' NUMERIC,  'Sizeto' NUMERIC,  'Quantity' NUMERIC,  'Waterused' NUMERIC,  'Cementused' NUMERIC,  'Insertmeth' TEXT,  'Shovannul' NUMERIC,  'Tremiepipe' NUMERIC,  'Revcirc' NUMERIC,  'Status' TEXT,  'Statusdate' TEXT,  'Statustime' NUMERIC,  'Party' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver30' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Depthfrom, Depthto))";
   return $sql_statement;
 }
 

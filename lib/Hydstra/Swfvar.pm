@@ -111,7 +111,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SWFVAR ( Station TEXT,  Variable NUMERIC,  Statdate TEXT,  Stattime NUMERIC,  Highthresh NUMERIC,  Instrument TEXT,  Lowthresh NUMERIC,  Parmaxover NUMERIC,  Parminover NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Spare4 TEXT,  Spare5 TEXT,  Spare6 TEXT,  Spare7 TEXT,  Spare8 TEXT,  Spare9 TEXT,  Spare10 TEXT,  Dbver4 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Variable, Statdate, Stattime))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SWFVAR ( 'Station' TEXT,  'Variable' NUMERIC,  'Statdate' TEXT,  'Stattime' NUMERIC,  'Highthresh' NUMERIC,  'Instrument' TEXT,  'Lowthresh' NUMERIC,  'Parmaxover' NUMERIC,  'Parminover' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Spare4' TEXT,  'Spare5' TEXT,  'Spare6' TEXT,  'Spare7' TEXT,  'Spare8' TEXT,  'Spare9' TEXT,  'Spare10' TEXT,  'Dbver4' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Variable, Statdate, Stattime))";
   return $sql_statement;
 }
 

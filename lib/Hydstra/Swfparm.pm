@@ -99,7 +99,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SWFPARM ( Station TEXT,  Parameter TEXT,  Variable NUMERIC,  Datumcor NUMERIC,  Npcomment TEXT,  Scadastn NUMERIC,  Scadadev NUMERIC,  Sdate TEXT,  Edate TEXT,  Minval NUMERIC,  Mindate TEXT,  Maxval NUMERIC,  Maxdate TEXT,  Dbver6 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Parameter))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SWFPARM ( 'Station' TEXT,  'Parameter' TEXT,  'Variable' NUMERIC,  'Datumcor' NUMERIC,  'Npcomment' TEXT,  'Scadastn' NUMERIC,  'Scadadev' NUMERIC,  'Sdate' TEXT,  'Edate' TEXT,  'Minval' NUMERIC,  'Mindate' TEXT,  'Maxval' NUMERIC,  'Maxdate' TEXT,  'Dbver6' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Parameter))";
   return $sql_statement;
 }
 

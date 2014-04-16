@@ -135,7 +135,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS AREASMT ( Station TEXT,  Assesstype TEXT,  Date TEXT,  Tenurecont TEXT,  Assofficer TEXT,  Certifier TEXT,  Sigsurname TEXT,  Sigfirstnm TEXT,  Sigtitle TEXT,  Sigdate TEXT,  Boreowner TEXT,  Constflag NUMERIC,  Pumpflag NUMERIC,  Wlmeasflag NUMERIC,  Wlmeascom TEXT,  Wldataflag NUMERIC,  Sampflag NUMERIC,  Sampcom TEXT,  Gasflag NUMERIC,  Gascom TEXT,  Resflag NUMERIC,  Rescom TEXT,  Hislabflag NUMERIC,  Fieldflag NUMERIC,  Fieldcom TEXT,  Hisfldflag NUMERIC,  Measptflag NUMERIC,  Purgeflag NUMERIC,  Pumpsflag NUMERIC,  Gasmeth TEXT,  Gasmethcom TEXT,  Dbver1 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Assesstype, Date))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS AREASMT ( 'Station' TEXT,  'Assesstype' TEXT,  'Date' TEXT,  'Tenurecont' TEXT,  'Assofficer' TEXT,  'Certifier' TEXT,  'Sigsurname' TEXT,  'Sigfirstnm' TEXT,  'Sigtitle' TEXT,  'Sigdate' TEXT,  'Boreowner' TEXT,  'Constflag' NUMERIC,  'Pumpflag' NUMERIC,  'Wlmeasflag' NUMERIC,  'Wlmeascom' TEXT,  'Wldataflag' NUMERIC,  'Sampflag' NUMERIC,  'Sampcom' TEXT,  'Gasflag' NUMERIC,  'Gascom' TEXT,  'Resflag' NUMERIC,  'Rescom' TEXT,  'Hislabflag' NUMERIC,  'Fieldflag' NUMERIC,  'Fieldcom' TEXT,  'Hisfldflag' NUMERIC,  'Measptflag' NUMERIC,  'Purgeflag' NUMERIC,  'Pumpsflag' NUMERIC,  'Gasmeth' TEXT,  'Gasmethcom' TEXT,  'Dbver1' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Assesstype, Date))";
   return $sql_statement;
 }
 

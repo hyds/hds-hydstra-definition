@@ -91,7 +91,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS RATEEQN ( Station TEXT,  Varfrom NUMERIC,  Varto NUMERIC,  Table NUMERIC,  Release NUMERIC,  Stagelow NUMERIC,  Stagehigh NUMERIC,  Equation TEXT,  Rqual NUMERIC,  Dbver19 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Varfrom, Varto, Table, Release, Stagelow))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS RATEEQN ( 'Station' TEXT,  'Varfrom' NUMERIC,  'Varto' NUMERIC,  'Table' NUMERIC,  'Release' NUMERIC,  'Stagelow' NUMERIC,  'Stagehigh' NUMERIC,  'Equation' TEXT,  'Rqual' NUMERIC,  'Dbver19' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Varfrom, Varto, Table, Release, Stagelow))";
   return $sql_statement;
 }
 

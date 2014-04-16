@@ -111,7 +111,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS PERIOD ( Station TEXT,  Datasource TEXT,  Varfrom NUMERIC,  Variable NUMERIC,  Subdesc TEXT,  Perstart TEXT,  Perend TEXT,  Numdays NUMERIC,  Datatype TEXT,  Maxvalue NUMERIC,  Maxdate TEXT,  Maxtime NUMERIC,  Reportmin NUMERIC,  Minvalue NUMERIC,  Mindate TEXT,  Mintime NUMERIC,  Pcentiles TEXT,  Rundate TEXT,  Runtime NUMERIC,  Dbver21 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Datasource, Varfrom, Variable))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS PERIOD ( 'Station' TEXT,  'Datasource' TEXT,  'Varfrom' NUMERIC,  'Variable' NUMERIC,  'Subdesc' TEXT,  'Perstart' TEXT,  'Perend' TEXT,  'Numdays' NUMERIC,  'Datatype' TEXT,  'Maxvalue' NUMERIC,  'Maxdate' TEXT,  'Maxtime' NUMERIC,  'Reportmin' NUMERIC,  'Minvalue' NUMERIC,  'Mindate' TEXT,  'Mintime' NUMERIC,  'Pcentiles' TEXT,  'Rundate' TEXT,  'Runtime' NUMERIC,  'Dbver21' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Datasource, Varfrom, Variable))";
   return $sql_statement;
 }
 

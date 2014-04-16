@@ -117,7 +117,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS ARESITE ( Station TEXT,  Lot TEXT,  Plan TEXT,  Gwdbsite NUMERIC,  Gwdbcomm TEXT,  Localsite TEXT,  Property TEXT,  Tenuretype TEXT,  Tenureno NUMERIC,  Tenureblk TEXT,  Meterflag NUMERIC,  Meterdesc TEXT,  Headwdesc TEXT,  Repairdesc TEXT,  Pumpdate TEXT,  Usemtrflag NUMERIC,  Usevolavg NUMERIC,  Usevolest NUMERIC,  Usevolmeth TEXT,  Pumpest NUMERIC,  Utilcom TEXT,  Usecom TEXT,  Dbver1 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS ARESITE ( 'Station' TEXT,  'Lot' TEXT,  'Plan' TEXT,  'Gwdbsite' NUMERIC,  'Gwdbcomm' TEXT,  'Localsite' TEXT,  'Property' TEXT,  'Tenuretype' TEXT,  'Tenureno' NUMERIC,  'Tenureblk' TEXT,  'Meterflag' NUMERIC,  'Meterdesc' TEXT,  'Headwdesc' TEXT,  'Repairdesc' TEXT,  'Pumpdate' TEXT,  'Usemtrflag' NUMERIC,  'Usevolavg' NUMERIC,  'Usevolest' NUMERIC,  'Usevolmeth' TEXT,  'Pumpest' NUMERIC,  'Utilcom' TEXT,  'Usecom' TEXT,  'Dbver1' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station))";
   return $sql_statement;
 }
 

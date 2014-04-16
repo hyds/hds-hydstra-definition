@@ -140,7 +140,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SAMPLES ( Station TEXT,  Sampnum TEXT,  Bottle TEXT,  Samptype TEXT,  Project1 TEXT,  Project2 TEXT,  Project3 TEXT,  Project4 TEXT,  Date TEXT,  Time NUMERIC,  Srcsamp TEXT,  Collsamp TEXT,  Collmeth TEXT,  Presmeth1 TEXT,  Presmeth2 TEXT,  Presmeth3 TEXT,  Presmeth4 TEXT,  Barcode TEXT,  Labref TEXT,  Labsampref TEXT,  Recdate TEXT,  Rectime NUMERIC,  Inputsrc TEXT,  Analdate TEXT,  Analtime NUMERIC,  Enteredby TEXT,  Checkedby TEXT,  Commnt TEXT,  Errstatus NUMERIC,  Errgroup NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver20 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Sampnum, Bottle))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SAMPLES ( 'Station' TEXT,  'Sampnum' TEXT,  'Bottle' TEXT,  'Samptype' TEXT,  'Project1' TEXT,  'Project2' TEXT,  'Project3' TEXT,  'Project4' TEXT,  'Date' TEXT,  'Time' NUMERIC,  'Srcsamp' TEXT,  'Collsamp' TEXT,  'Collmeth' TEXT,  'Presmeth1' TEXT,  'Presmeth2' TEXT,  'Presmeth3' TEXT,  'Presmeth4' TEXT,  'Barcode' TEXT,  'Labref' TEXT,  'Labsampref' TEXT,  'Recdate' TEXT,  'Rectime' NUMERIC,  'Inputsrc' TEXT,  'Analdate' TEXT,  'Analtime' NUMERIC,  'Enteredby' TEXT,  'Checkedby' TEXT,  'Commnt' TEXT,  'Errstatus' NUMERIC,  'Errgroup' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver20' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Sampnum, Bottle))";
   return $sql_statement;
 }
 

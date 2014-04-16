@@ -118,7 +118,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SEWRSITE ( Station TEXT,  Xsectstn TEXT,  Xsectid TEXT,  Invslope NUMERIC,  Conheight NUMERIC,  Conheightu TEXT,  Pipelen NUMERIC,  Pipelenu TEXT,  Inchmile NUMERIC,  Inchmileu TEXT,  Qfull NUMERIC,  Qfullu TEXT,  Rainstn TEXT,  Rainvar NUMERIC,  Inflvf NUMERIC,  Wetvf NUMERIC,  Siltdepth NUMERIC,  Siltdepthu TEXT,  Catcharea NUMERIC,  Catchareau TEXT,  Catchpop NUMERIC,  Timebase NUMERIC,  Dbver13 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SEWRSITE ( 'Station' TEXT,  'Xsectstn' TEXT,  'Xsectid' TEXT,  'Invslope' NUMERIC,  'Conheight' NUMERIC,  'Conheightu' TEXT,  'Pipelen' NUMERIC,  'Pipelenu' TEXT,  'Inchmile' NUMERIC,  'Inchmileu' TEXT,  'Qfull' NUMERIC,  'Qfullu' TEXT,  'Rainstn' TEXT,  'Rainvar' NUMERIC,  'Inflvf' NUMERIC,  'Wetvf' NUMERIC,  'Siltdepth' NUMERIC,  'Siltdepthu' TEXT,  'Catcharea' NUMERIC,  'Catchareau' TEXT,  'Catchpop' NUMERIC,  'Timebase' NUMERIC,  'Dbver13' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station))";
   return $sql_statement;
 }
 

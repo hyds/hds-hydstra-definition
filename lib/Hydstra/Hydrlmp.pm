@@ -109,7 +109,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS HYDRLMP ( Station TEXT,  Hole NUMERIC,  Pipe NUMERIC,  Date TEXT,  Time NUMERIC,  Datumtype TEXT,  Rlmp NUMERIC,  Elevacc TEXT,  Surveydate TEXT,  Surveyor TEXT,  Abovgnd NUMERIC,  Measpttype TEXT,  Measptdesc TEXT,  Refpoint NUMERIC,  Comments TEXT,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver20 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Pipe, Date, Time))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS HYDRLMP ( 'Station' TEXT,  'Hole' NUMERIC,  'Pipe' NUMERIC,  'Date' TEXT,  'Time' NUMERIC,  'Datumtype' TEXT,  'Rlmp' NUMERIC,  'Elevacc' TEXT,  'Surveydate' TEXT,  'Surveyor' TEXT,  'Abovgnd' NUMERIC,  'Measpttype' TEXT,  'Measptdesc' TEXT,  'Refpoint' NUMERIC,  'Comments' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver20' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Pipe, Date, Time))";
   return $sql_statement;
 }
 

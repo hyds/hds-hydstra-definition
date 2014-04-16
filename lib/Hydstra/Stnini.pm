@@ -87,7 +87,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS STNINI ( Station TEXT,  Keyword TEXT,  Order NUMERIC,  Category TEXT,  Descr TEXT,  Text TEXT,  Xmldata TEXT,  Dbver20 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Keyword, Order))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS STNINI ( 'Station' TEXT,  'Keyword' TEXT,  'Order' NUMERIC,  'Category' TEXT,  'Descr' TEXT,  'Text' TEXT,  'Xmldata' TEXT,  'Dbver20' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Keyword, Order))";
   return $sql_statement;
 }
 

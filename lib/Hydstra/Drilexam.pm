@@ -103,7 +103,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS DRILEXAM ( Drillic TEXT,  Borelic TEXT,  Landowner TEXT,  Addr1 TEXT,  Addr2 TEXT,  Addr3 TEXT,  Town TEXT,  State TEXT,  Postcode TEXT,  Boretype TEXT,  Diameter NUMERIC,  Yield NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver3 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Drillic, Borelic))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS DRILEXAM ( 'Drillic' TEXT,  'Borelic' TEXT,  'Landowner' TEXT,  'Addr1' TEXT,  'Addr2' TEXT,  'Addr3' TEXT,  'Town' TEXT,  'State' TEXT,  'Postcode' TEXT,  'Boretype' TEXT,  'Diameter' NUMERIC,  'Yield' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver3' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Drillic, Borelic))";
   return $sql_statement;
 }
 

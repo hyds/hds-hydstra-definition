@@ -129,7 +129,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS LITHGEO ( Station TEXT,  Hole NUMERIC,  Interpret TEXT,  Depthfrom NUMERIC,  Depthto NUMERIC,  Date TEXT,  Time NUMERIC,  Rocktype TEXT,  Person TEXT,  Source TEXT,  Rockdesc TEXT,  Color TEXT,  Weather TEXT,  Grainsize TEXT,  Shape TEXT,  Sorting TEXT,  Hardness TEXT,  Coherence TEXT,  Structure TEXT,  Feel TEXT,  Fracture TEXT,  Porosity TEXT,  Fossils TEXT,  Comments TEXT,  Verified NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver25 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Interpret, Depthfrom))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS LITHGEO ( 'Station' TEXT,  'Hole' NUMERIC,  'Interpret' TEXT,  'Depthfrom' NUMERIC,  'Depthto' NUMERIC,  'Date' TEXT,  'Time' NUMERIC,  'Rocktype' TEXT,  'Person' TEXT,  'Source' TEXT,  'Rockdesc' TEXT,  'Color' TEXT,  'Weather' TEXT,  'Grainsize' TEXT,  'Shape' TEXT,  'Sorting' TEXT,  'Hardness' TEXT,  'Coherence' TEXT,  'Structure' TEXT,  'Feel' TEXT,  'Fracture' TEXT,  'Porosity' TEXT,  'Fossils' TEXT,  'Comments' TEXT,  'Verified' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver25' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Interpret, Depthfrom))";
   return $sql_statement;
 }
 

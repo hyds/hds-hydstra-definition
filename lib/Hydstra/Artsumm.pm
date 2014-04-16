@@ -138,7 +138,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS ARTSUMM ( Station TEXT,  Hole NUMERIC,  Pipe NUMERIC,  Date TEXT,  Time NUMERIC,  Note TEXT,  Monitornam TEXT,  Lendrain NUMERIC,  Barostart NUMERIC,  Barofinish NUMERIC,  Openflow NUMERIC,  Acidalkal NUMERIC,  Eleccond NUMERIC,  Headleak NUMERIC,  Headwork TEXT,  Basin1 TEXT,  Flowdstyp1 TEXT,  Basin2 TEXT,  Flowdstyp2 TEXT,  Basin3 TEXT,  Flowdstyp3 TEXT,  Basin4 TEXT,  Flowdstyp4 TEXT,  Loginstall NUMERIC,  Flwastage NUMERIC,  Orifplate NUMERIC,  Trickle NUMERIC,  Ctf NUMERIC,  Watersamp NUMERIC,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Dbver23 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Pipe, Date))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS ARTSUMM ( 'Station' TEXT,  'Hole' NUMERIC,  'Pipe' NUMERIC,  'Date' TEXT,  'Time' NUMERIC,  'Note' TEXT,  'Monitornam' TEXT,  'Lendrain' NUMERIC,  'Barostart' NUMERIC,  'Barofinish' NUMERIC,  'Openflow' NUMERIC,  'Acidalkal' NUMERIC,  'Eleccond' NUMERIC,  'Headleak' NUMERIC,  'Headwork' TEXT,  'Basin1' TEXT,  'Flowdstyp1' TEXT,  'Basin2' TEXT,  'Flowdstyp2' TEXT,  'Basin3' TEXT,  'Flowdstyp3' TEXT,  'Basin4' TEXT,  'Flowdstyp4' TEXT,  'Loginstall' NUMERIC,  'Flwastage' NUMERIC,  'Orifplate' NUMERIC,  'Trickle' NUMERIC,  'Ctf' NUMERIC,  'Watersamp' NUMERIC,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Dbver23' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Pipe, Date))";
   return $sql_statement;
 }
 

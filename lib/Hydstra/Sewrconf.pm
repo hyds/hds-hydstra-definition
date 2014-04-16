@@ -127,7 +127,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SEWRCONF ( Station TEXT,  Date TEXT,  Time NUMERIC,  Dvar1 NUMERIC,  Dvar2 NUMERIC,  Dvar3 NUMERIC,  Dvar4 NUMERIC,  Vvar1 NUMERIC,  Vvar2 NUMERIC,  Vvar3 NUMERIC,  Vvar4 NUMERIC,  Qvar1 NUMERIC,  Qvar2 NUMERIC,  Qvar3 NUMERIC,  Qvar4 NUMERIC,  Finaldm TEXT,  Finalvm TEXT,  Finalqm TEXT,  Siltdepth NUMERIC,  Siltdepthu TEXT,  Mannings NUMERIC,  Colebrook NUMERIC,  Colebrooku TEXT,  Catcharea NUMERIC,  Catchareau TEXT,  Catchpop NUMERIC,  Errstatus NUMERIC,  Dbver12 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Date, Time))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SEWRCONF ( 'Station' TEXT,  'Date' TEXT,  'Time' NUMERIC,  'Dvar1' NUMERIC,  'Dvar2' NUMERIC,  'Dvar3' NUMERIC,  'Dvar4' NUMERIC,  'Vvar1' NUMERIC,  'Vvar2' NUMERIC,  'Vvar3' NUMERIC,  'Vvar4' NUMERIC,  'Qvar1' NUMERIC,  'Qvar2' NUMERIC,  'Qvar3' NUMERIC,  'Qvar4' NUMERIC,  'Finaldm' TEXT,  'Finalvm' TEXT,  'Finalqm' TEXT,  'Siltdepth' NUMERIC,  'Siltdepthu' TEXT,  'Mannings' NUMERIC,  'Colebrook' NUMERIC,  'Colebrooku' TEXT,  'Catcharea' NUMERIC,  'Catchareau' TEXT,  'Catchpop' NUMERIC,  'Errstatus' NUMERIC,  'Dbver12' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Date, Time))";
   return $sql_statement;
 }
 

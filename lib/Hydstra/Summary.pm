@@ -85,7 +85,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS SUMMARY ( Station TEXT,  Variable NUMERIC,  Count NUMERIC,  Maximum NUMERIC,  Minimum NUMERIC,  Mean NUMERIC,  Sdeviation NUMERIC,  Lo_perc TEXT,  Median TEXT,  Hi_perc TEXT,  Sdate TEXT,  Edate TEXT,  Dbver8 NUMERIC, PRIMARY KEY (Station, Variable))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS SUMMARY ( 'Station' TEXT,  'Variable' NUMERIC,  'Count' NUMERIC,  'Maximum' NUMERIC,  'Minimum' NUMERIC,  'Mean' NUMERIC,  'Sdeviation' NUMERIC,  'Lo_perc' TEXT,  'Median' TEXT,  'Hi_perc' TEXT,  'Sdate' TEXT,  'Edate' TEXT,  'Dbver8' NUMERIC, PRIMARY KEY (Station, Variable))";
   return $sql_statement;
 }
 

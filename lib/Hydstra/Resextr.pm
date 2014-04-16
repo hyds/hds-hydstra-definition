@@ -97,7 +97,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS RESEXTR ( Fileformat TEXT,  Variable NUMERIC,  Fieldname TEXT,  Numeric NUMERIC,  Mult NUMERIC,  Add NUMERIC,  Fixed NUMERIC,  Position NUMERIC,  Length NUMERIC,  Delimiter TEXT,  Validation TEXT,  Invalidact TEXT,  Dbver13 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Fileformat, Variable, Fieldname))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS RESEXTR ( 'Fileformat' TEXT,  'Variable' NUMERIC,  'Fieldname' TEXT,  'Numeric' NUMERIC,  'Mult' NUMERIC,  'Add' NUMERIC,  'Fixed' NUMERIC,  'Position' NUMERIC,  'Length' NUMERIC,  'Delimiter' TEXT,  'Validation' TEXT,  'Invalidact' TEXT,  'Dbver13' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Fileformat, Variable, Fieldname))";
   return $sql_statement;
 }
 

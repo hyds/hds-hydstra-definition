@@ -95,7 +95,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS DRILLIC ( Drillic TEXT,  Class TEXT,  Status TEXT,  Startdate TEXT,  Expirydate TEXT,  Comments TEXT,  Spare1 TEXT,  Spare2 TEXT,  Spare3 TEXT,  Spare4 TEXT,  Spare5 TEXT,  Dbver3 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Drillic, Class))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS DRILLIC ( 'Drillic' TEXT,  'Class' TEXT,  'Status' TEXT,  'Startdate' TEXT,  'Expirydate' TEXT,  'Comments' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Spare3' TEXT,  'Spare4' TEXT,  'Spare5' TEXT,  'Dbver3' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Drillic, Class))";
   return $sql_statement;
 }
 

@@ -98,7 +98,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS PEAKTIME ( Station TEXT,  Varfrom NUMERIC,  Varto NUMERIC,  Peaktype TEXT,  Qmin NUMERIC,  Tmin NUMERIC,  Sdate TEXT,  Stime NUMERIC,  Edate TEXT,  Etime NUMERIC,  Rdate TEXT,  Rtime NUMERIC,  Dbver14 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Varfrom, Varto, Peaktype))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS PEAKTIME ( 'Station' TEXT,  'Varfrom' NUMERIC,  'Varto' NUMERIC,  'Peaktype' TEXT,  'Qmin' NUMERIC,  'Tmin' NUMERIC,  'Sdate' TEXT,  'Stime' NUMERIC,  'Edate' TEXT,  'Etime' NUMERIC,  'Rdate' TEXT,  'Rtime' NUMERIC,  'Dbver14' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Varfrom, Varto, Peaktype))";
   return $sql_statement;
 }
 

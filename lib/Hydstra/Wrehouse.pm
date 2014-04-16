@@ -137,7 +137,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS WREHOUSE ( Station TEXT,  Sampnum TEXT,  Bottle TEXT,  Samptype TEXT,  Project1 TEXT,  Project2 TEXT,  Project3 TEXT,  Project4 TEXT,  Date TEXT,  Time NUMERIC,  Variable NUMERIC,  Method TEXT,  Accuracy NUMERIC,  Value NUMERIC,  Flag TEXT,  Quality NUMERIC,  Lolimit NUMERIC,  Uplimit NUMERIC,  Srcsamp TEXT,  Collsamp TEXT,  Collmeth TEXT,  Presmeth1 TEXT,  Presmeth2 TEXT,  Presmeth3 TEXT,  Presmeth4 TEXT,  Labref TEXT,  Labsampref TEXT,  Recdate TEXT,  Rectime NUMERIC,  Inputsrc TEXT,  Analdate TEXT,  Analtime NUMERIC,  Dbver21 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Sampnum, Bottle, Date, Time, Variable))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS WREHOUSE ( 'Station' TEXT,  'Sampnum' TEXT,  'Bottle' TEXT,  'Samptype' TEXT,  'Project1' TEXT,  'Project2' TEXT,  'Project3' TEXT,  'Project4' TEXT,  'Date' TEXT,  'Time' NUMERIC,  'Variable' NUMERIC,  'Method' TEXT,  'Accuracy' NUMERIC,  'Value' NUMERIC,  'Flag' TEXT,  'Quality' NUMERIC,  'Lolimit' NUMERIC,  'Uplimit' NUMERIC,  'Srcsamp' TEXT,  'Collsamp' TEXT,  'Collmeth' TEXT,  'Presmeth1' TEXT,  'Presmeth2' TEXT,  'Presmeth3' TEXT,  'Presmeth4' TEXT,  'Labref' TEXT,  'Labsampref' TEXT,  'Recdate' TEXT,  'Rectime' NUMERIC,  'Inputsrc' TEXT,  'Analdate' TEXT,  'Analtime' NUMERIC,  'Dbver21' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Sampnum, Bottle, Date, Time, Variable))";
   return $sql_statement;
 }
 

@@ -102,7 +102,7 @@ sub child_of{
   
 sub create{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="CREATE TABLE IF NOT EXISTS GWTRACE ( Station TEXT,  Hole NUMERIC,  Pipe NUMERIC,  Date TEXT,  Time NUMERIC,  Depthfrom NUMERIC,  Depthto NUMERIC,  Instmake TEXT,  Instmod TEXT,  Instserial TEXT,  Operator TEXT,  Type TEXT,  Step NUMERIC,  Comment TEXT,  Dbver3 NUMERIC,  Datecreate TEXT,  Timecreate NUMERIC,  Usercreate TEXT,  Datemod TEXT,  Timemod NUMERIC,  Usermod TEXT, PRIMARY KEY (Station, Hole, Pipe, Date, Time))";
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS GWTRACE ( 'Station' TEXT,  'Hole' NUMERIC,  'Pipe' NUMERIC,  'Date' TEXT,  'Time' NUMERIC,  'Depthfrom' NUMERIC,  'Depthto' NUMERIC,  'Instmake' TEXT,  'Instmod' TEXT,  'Instserial' TEXT,  'Operator' TEXT,  'Type' TEXT,  'Step' NUMERIC,  'Comment' TEXT,  'Dbver3' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Hole, Pipe, Date, Time))";
   return $sql_statement;
 }
 
