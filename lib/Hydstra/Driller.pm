@@ -146,6 +146,17 @@ subtype 'DrillerDeladdr1', as 'Str', where { length($_) <= 50 }, message{ my $le
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables driller is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( drillic );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables driller is a parent of.
@@ -165,6 +176,17 @@ sub parent_of{
   
 sub child_of{
   return 0;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( drillic companyid filenumber surname fstname title addr1 addr2 addr3 town state postcode deladdr1 deladdr2 deladdr3 deltown delstate dpostcode phone altphone mobile fax appldate status expirydate class email dob lspare1 lspare2 lspare3 lspare4 lspare5 otherqual endorse1 endorse2 endorse3 endorse4 endorse5 endorse6 endorse7 endorse8 endorse9 endorse10 otherendrs photoincl spare1 spare2 spare3 spare4 spare5 dbver20 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

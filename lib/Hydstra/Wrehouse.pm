@@ -108,6 +108,17 @@ subtype 'WrehouseLolimit', as 'Num', where { length($_) <= 15 && $_ =~ m{[+-]?(\
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables wrehouse is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station sampnum bottle date time variable );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables wrehouse is a parent of.
@@ -127,6 +138,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station sampnum bottle samptype project1 project2 project3 project4 date time variable method accuracy value flag quality lolimit uplimit srcsamp collsamp collmeth presmeth1 presmeth2 presmeth3 presmeth4 labref labsampref recdate rectime inputsrc analdate analtime dbver21 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

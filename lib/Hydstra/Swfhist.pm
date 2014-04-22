@@ -80,6 +80,17 @@ subtype 'SwfhistSpare8', as 'Str', where { length($_) <= 20 }, message{ my $leng
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables swfhist is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station statdate stattime );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables swfhist is a parent of.
@@ -99,6 +110,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station statdate stattime agency colmeth source datumcorr surveyloc spare1 spare2 spare3 spare4 spare5 spare6 spare7 spare8 spare9 spare10 dbver3 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

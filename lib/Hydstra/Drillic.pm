@@ -66,6 +66,17 @@ subtype 'DrillicClass', as 'Str', where { length($_) <= 8 }, message{ my $length
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables drillic is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( drillic class );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables drillic is a parent of.
@@ -85,6 +96,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( drillic class status startdate expirydate comments spare1 spare2 spare3 spare4 spare5 dbver3 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

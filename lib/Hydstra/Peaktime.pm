@@ -68,6 +68,17 @@ subtype 'PeaktimeRdate', as 'DateTime', where { length($_) <= 8 && $_ =~ m{[1-2]
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables peaktime is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station varfrom varto peaktype );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables peaktime is a parent of.
@@ -88,6 +99,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station varfrom varto peaktype qmin tmin sdate stime edate etime rdate rtime dbver14 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

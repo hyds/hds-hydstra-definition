@@ -70,6 +70,17 @@ subtype 'SwfparmUsercreate', as 'Str', where { length($_) <= 8 }, message{ my $l
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables swfparm is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station parameter );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables swfparm is a parent of.
@@ -89,6 +100,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station parameter variable datumcor npcomment scadastn scadadev sdate edate minval mindate maxval maxdate dbver6 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

@@ -74,6 +74,17 @@ subtype 'DrilexamAddr3', as 'Str', where { length($_) <= 50 }, message{ my $leng
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables drilexam is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( drillic borelic );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables drilexam is a parent of.
@@ -93,6 +104,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( drillic borelic landowner addr1 addr2 addr3 town state postcode boretype diameter yield spare1 spare2 spare3 dbver3 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

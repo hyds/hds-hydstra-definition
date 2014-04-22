@@ -106,6 +106,17 @@ subtype 'AreasmtPumpsflag', as 'Num', where { length($_) <= 1 && $_ =~ m{[+-]?(\
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables areasmt is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station assesstype date );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables areasmt is a parent of.
@@ -125,6 +136,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station assesstype date tenurecont assofficer certifier sigsurname sigfirstnm sigtitle sigdate boreowner constflag pumpflag wlmeasflag wlmeascom wldataflag sampflag sampcom gasflag gascom resflag rescom hislabflag fieldflag fieldcom hisfldflag measptflag purgeflag pumpsflag gasmeth gasmethcom dbver1 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

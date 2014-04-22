@@ -82,6 +82,17 @@ subtype 'PeriodDatatype', as 'Str', where { length($_) <= 8 }, message{ my $leng
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables period is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station datasource varfrom variable );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables period is a parent of.
@@ -101,6 +112,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station datasource varfrom variable subdesc perstart perend numdays datatype maxvalue maxdate maxtime reportmin minvalue mindate mintime pcentiles rundate runtime dbver21 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

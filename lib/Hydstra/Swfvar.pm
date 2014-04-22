@@ -82,6 +82,17 @@ subtype 'SwfvarDbver4', as 'Num', where { length($_) <= 1 && $_ =~ m{[+-]?(\d{1,
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables swfvar is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station variable statdate stattime );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables swfvar is a parent of.
@@ -101,6 +112,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station variable statdate stattime highthresh instrument lowthresh parmaxover parminover spare1 spare2 spare3 spare4 spare5 spare6 spare7 spare8 spare9 spare10 dbver4 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

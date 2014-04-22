@@ -116,6 +116,17 @@ subtype 'SampdfltRecvalid', as 'Str', where { length($_) <= 40 }, message{ my $l
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables sampdflt is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( fileformat );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables sampdflt is a parent of.
@@ -135,6 +146,17 @@ sub parent_of{
   
 sub child_of{
   return 0;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( fileformat name numscheme preprocess recvalid station sampnum bottle samptype project1 project2 project3 project4 date time srcsamp collsamp collmeth presmeth1 presmeth2 presmeth3 presmeth4 barcode labref labsampref recdate rectime inputsrc analdate analtime enteredby checkedby commnt spare1 spare2 spare3 dbver20 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

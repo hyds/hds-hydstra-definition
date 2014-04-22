@@ -134,6 +134,17 @@ subtype 'GaugingsEndsgh', as 'Num', where { length($_) <= 8 && $_ =~ m{[+-]?(\d{
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables gaugings is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( stn varfrom varto meas_date start_time );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables gaugings is a parent of.
@@ -154,6 +165,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( stn varfrom varto meas_date start_time end_time gauge_no start_gh end_gh m_gh flow deviation quality method meter_no wmgh party area velocity maxdepth maxvel slope mannings wettedper ctf temp ph cond sediment sample width sections method_2 method_6 method_8 gshift startsgh endsgh commnt rawtype rawdata enteredby checkedby spare1 spare2 dbver29 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

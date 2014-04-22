@@ -70,6 +70,17 @@ subtype 'SshiftDbver11', as 'Num', where { length($_) <= 1 && $_ =~ m{[+-]?(\d{1
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables sshift is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station varfrom varto sdate stime );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables sshift is a parent of.
@@ -89,6 +100,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station varfrom varto sdate stime active stage1 shift1 stage2 shift2 stage3 shift3 commnt dbver11 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

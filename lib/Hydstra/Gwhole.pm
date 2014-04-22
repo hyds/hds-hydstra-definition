@@ -148,6 +148,17 @@ subtype 'GwholeLicvalid', as 'Num', where { length($_) <= 1 && $_ =~ m{[+-]?(\d{
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables gwhole is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station hole );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables gwhole is a parent of.
@@ -168,6 +179,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station hole linkstn parent hgunumber depthcompl depthdrill datumagl startdate enddate statrecvd boretype ownertype ownername meascode obsfreq salinity salincode yield yielddesc swl ddlvalue logavail drillic licvalid unlicfst unlicsur contractor consttype constmeth conststat spatvalid asstdrillr abandnmeth capmethod instrument partbkfil maxdiam sitemarker headopen headcap headvalve caseshoe bullcap airdepth pumpdepth comment spare1 spare2 spare3 spare4 spare5 dbver9 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

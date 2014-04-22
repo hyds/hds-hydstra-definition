@@ -162,6 +162,17 @@ subtype 'SwfsiteCasdiam', as 'Num', where { length($_) <= 6 && $_ =~ m{[+-]?(\d{
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables swfsite is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables swfsite is a parent of.
@@ -182,6 +193,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station stnname altname county county1 basin eqowner recordty outdist subtype stg233 agc233 stg5 agc5 stg10 agc10 stg20 agc20 stg50 agc50 stg100 agc100 ctnstru mlevst adopt minflood lowmg nxlowmg fld10y lksize fgsno inout outwseq casdep casdiam casname surfelev totdepth aquifer lithfrom lithto linktyp linksite solrad calibfac calcwind depsitenum gaugeloc hdstatus inactcode intendfreq latlonmeth latlonsrc mpdescript polbasin scadadev sitedirect uidstation wuca dbver8 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

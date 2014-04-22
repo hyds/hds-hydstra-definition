@@ -100,6 +100,17 @@ subtype 'LithgeoHardness', as 'Str', where { length($_) <= 8 }, message{ my $len
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables lithgeo is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station hole interpret depthfrom );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables lithgeo is a parent of.
@@ -119,6 +130,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station hole interpret depthfrom depthto date time rocktype person source rockdesc color weather grainsize shape sorting hardness coherence structure feel fracture porosity fossils comments verified spare1 spare2 spare3 dbver25 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

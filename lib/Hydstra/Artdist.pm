@@ -78,6 +78,17 @@ subtype 'ArtdistPointname', as 'Str', where { length($_) <= 30 }, message{ my $l
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables artdist is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station hole pipe date time onarrival measdevice pointid );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables artdist is a parent of.
@@ -97,6 +108,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station hole pipe date time onarrival measdevice pointid pointname flowdepth velocity backpress flow weirwidth spare1 spare2 spare3 dbver8 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

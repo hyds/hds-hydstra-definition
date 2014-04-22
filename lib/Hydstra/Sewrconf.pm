@@ -98,6 +98,17 @@ subtype 'SewrconfVvar4', as 'Num', where { length($_) <= 7 && $_ =~ m{[+-]?(\d{1
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables sewrconf is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station date time );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables sewrconf is a parent of.
@@ -117,6 +128,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station date time dvar1 dvar2 dvar3 dvar4 vvar1 vvar2 vvar3 vvar4 qvar1 qvar2 qvar3 qvar4 finaldm finalvm finalqm siltdepth siltdepthu mannings colebrook colebrooku catcharea catchareau catchpop errstatus dbver12 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

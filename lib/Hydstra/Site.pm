@@ -146,6 +146,17 @@ subtype 'SiteQquarter', as 'Str', where { length($_) <= 2 }, message{ my $length
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables site is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables site is a parent of.
@@ -165,6 +176,17 @@ sub parent_of{
   
 sub child_of{
   return 0;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station parent stname shortname mapname zone easting northing grdatum latitude longitude lldatum posacc elev elevacc local_map timezone qquarter quarter section township range meridian active owner commence cease stntype region orgcode barcode category1 category2 category3 category4 category5 category6 category7 category8 category9 category10 category11 category12 category13 category14 category15 spare1 spare2 enteredby checkedby comment dbver38 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

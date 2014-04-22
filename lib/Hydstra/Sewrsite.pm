@@ -88,6 +88,17 @@ subtype 'SewrsiteUsercreate', as 'Str', where { length($_) <= 8 }, message{ my $
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables sewrsite is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables sewrsite is a parent of.
@@ -108,6 +119,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station xsectstn xsectid invslope conheight conheightu pipelen pipelenu inchmile inchmileu qfull qfullu rainstn rainvar inflvf wetvf siltdepth siltdepthu catcharea catchareau catchpop timebase dbver13 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

@@ -60,6 +60,17 @@ subtype 'RateptsRqual', as 'Num', where { length($_) <= 3 && $_ =~ m{[+-]?(\d{1,
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables ratepts is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station varfrom varto table release stage );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables ratepts is a parent of.
@@ -79,6 +90,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station varfrom varto table release stage disch rqual dbver14 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()

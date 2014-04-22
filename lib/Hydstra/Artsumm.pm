@@ -108,6 +108,17 @@ subtype 'ArtsummLendrain', as 'Num', where { length($_) <= 5 && $_ =~ m{[+-]?(\d
 
 =head1 SUBROUTINES/METHODS
 
+=head2 keys()
+  
+  Find out what tables artsumm is a parent of.
+
+=cut
+  
+sub keys{
+  my @kys = qw( station hole pipe date );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables artsumm is a parent of.
@@ -128,6 +139,17 @@ sub parent_of{
 sub child_of{
   my @array = CHILD_OF;
   return \@array;
+}
+
+=head2 ordered_fields()
+  
+  Return the ordered fields for SQLite INSERT for the Hydstra table
+
+=cut
+  
+sub ordered_fields{
+  my @fields = qw( station hole pipe date time note monitornam lendrain barostart barofinish openflow acidalkal eleccond headleak headwork basin1 flowdstyp1 basin2 flowdstyp2 basin3 flowdstyp3 basin4 flowdstyp4 loginstall flwastage orifplate trickle ctf watersamp spare1 spare2 spare3 dbver23 datecreate timecreate usercreate datemod timemod usermod );
+  return \@fields;
 }
 
 =head2 create()
