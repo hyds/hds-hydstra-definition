@@ -10,7 +10,7 @@ license  'artistic2';
 
 perl_version 5.006;
 
-version 0.01;
+version 0.02;
 
 tests_recursive('t');
 
