@@ -34,11 +34,11 @@ subtype 'RateeqnVarfrom', as 'Num', where { length($_) <= 7 && $_ =~ m{[+-]?(\d{
 subtype 'RateeqnEquation', as 'Str', where { length($_) <= 250 }, message{ my $length = length($_);my $value = $_; "Value [$value] must be less than [250] char, not [$length] characters.~"  };
 subtype 'RateeqnTimemod', as 'Num', where { length($_) <= 4 && $_ =~ m{[+-]?(\d{1,4})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [4] and decimals [0].~"  };
 subtype 'RateeqnVarto', as 'Num', where { length($_) <= 4 && $_ =~ m{[+-]?(\d{1,4})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [4] and decimals [0].~"  };
-subtype 'RateeqnDatemod', as 'DateTime', where { length($_) <= 8 && $_ =~ m{[1-2]{1}[0,9]{1}\d{6}}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be less than [8] char, not [$length] characters.~"  };
+subtype 'RateeqnDatemod', as 'Num', where { length($_) <= 8 && $_ =~ m{[+-]?(\d{1,8})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [8] and decimals [0].~"  };
 subtype 'RateeqnRqual', as 'Num', where { length($_) <= 3 && $_ =~ m{[+-]?(\d{1,3})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [3] and decimals [0].~"  };
 subtype 'RateeqnStation', as 'Str', where { length($_) <= 15 }, message{ my $length = length($_);my $value = $_; "Value [$value] must be less than [15] char, not [$length] characters.~"  };
 subtype 'RateeqnRelease', as 'Num', where { length($_) <= 2 && $_ =~ m{[+-]?(\d{1,2})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [2] and decimals [0].~"  };
-subtype 'RateeqnDatecreate', as 'DateTime', where { length($_) <= 8 && $_ =~ m{[1-2]{1}[0,9]{1}\d{6}}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be less than [8] char, not [$length] characters.~"  };
+subtype 'RateeqnDatecreate', as 'Num', where { length($_) <= 8 && $_ =~ m{[+-]?(\d{1,8})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [8] and decimals [0].~"  };
 subtype 'RateeqnUsercreate', as 'Str', where { length($_) <= 8 }, message{ my $length = length($_);my $value = $_; "Value [$value] must be less than [8] char, not [$length] characters.~"  };
 subtype 'RateeqnDbver19', as 'Num', where { length($_) <= 1 && $_ =~ m{[+-]?(\d{1,1})?}}, message{ my $length = length($_);my $value = $_; "Value [$value] must be numeric, less than length [1] and decimals [0].~"  };
 
@@ -125,11 +125,16 @@ sub create{
   
 sub prepare{
   my $uctable = UC_TABLE_NAME;
-  my $sql_statement ="INSERT INTO RATEEQN VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+  my $sql_statement ="INSERT OR IGNORE INTO RATEEQN VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   return $sql_statement;
 }
 
-
+sub is_date{
+  my $self = shift;
+  my $type_name = shift;
+  my ($table,$field) = split('_',$type_name);
+  ($field =~ m{^(date|time).*}i)? return 1: return;
+}
 
 
 
