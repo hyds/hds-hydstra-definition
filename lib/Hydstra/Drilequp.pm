@@ -133,7 +133,7 @@ sub is_date{
   my $self = shift;
   my $type_name = shift;
   my ($table,$field) = split('_',$type_name);
-  ($field =~ m{^(date|time).*}i)? return 1: return;
+  ($field =~ m{^(date|time|testdate|starttime|recdate|rectime|analdate|analtime|statdate|stattime|sigdate|cumdurat).*}i)? return 1: return;
 }
 
 
