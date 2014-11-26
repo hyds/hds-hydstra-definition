@@ -91,6 +91,17 @@ sub keys{
   return \@kys;
 }
 
+=head2 mergify_keys()
+  
+  Return keys for mergification
+
+=cut
+  
+sub mergify_keys{
+  my @kys = qw( station sampnum bottle variable method accuracy value flag quality lolimit uplimit make model serial commnt spare1 );
+  return \@kys;
+}
+
 =head2 parent_of()
   
   Find out what tables results is a parent of.
@@ -134,6 +145,21 @@ sub create{
   my $sql_statement ="CREATE TABLE IF NOT EXISTS RESULTS ( 'Station' TEXT,  'Sampnum' TEXT,  'Bottle' TEXT,  'Variable' NUMERIC,  'Method' TEXT,  'Accuracy' NUMERIC,  'Value' NUMERIC,  'Flag' TEXT,  'Quality' NUMERIC,  'Lolimit' NUMERIC,  'Uplimit' NUMERIC,  'Make' TEXT,  'Model' TEXT,  'Serial' TEXT,  'Commnt' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Errstatus' NUMERIC,  'Dbver20' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (Station, Sampnum, Bottle, Variable))";
   return $sql_statement;
 }
+
+
+=head2 mergify_create()
+  
+  SQL statement to create table in SQLite db for mergification
+
+=cut
+
+sub mergify_create{
+  my $uctable = UC_TABLE_NAME;
+  my $sql_statement ="CREATE TABLE IF NOT EXISTS RESULTS ( 'Station' TEXT,  'Sampnum' TEXT,  'Bottle' TEXT,  'Variable' NUMERIC,  'Method' TEXT,  'Accuracy' NUMERIC,  'Value' NUMERIC,  'Flag' TEXT,  'Quality' NUMERIC,  'Lolimit' NUMERIC,  'Uplimit' NUMERIC,  'Make' TEXT,  'Model' TEXT,  'Serial' TEXT,  'Commnt' TEXT,  'Spare1' TEXT,  'Spare2' TEXT,  'Errstatus' NUMERIC,  'Dbver20' NUMERIC,  'Datecreate' TEXT,  'Timecreate' NUMERIC,  'Usercreate' TEXT,  'Datemod' TEXT,  'Timemod' NUMERIC,  'Usermod' TEXT, PRIMARY KEY (station, sampnum, bottle, variable, method, accuracy, value, flag, quality, lolimit, uplimit, make, model, serial, commnt, spare1))";
+  return $sql_statement;
+}
+
+
 
 =head2 prepare()
   

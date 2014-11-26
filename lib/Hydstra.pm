@@ -71,6 +71,11 @@ use Hydstra::Stnini;
   use Hydstra::Ratehed;
   use Hydstra::Driller;
   use Hydstra::Results;
+  use Hydstra::Varcon;
+  use Hydstra::Variable;
+  use Hydstra::Wqvar;
+  use Hydstra::Varcon;
+  use Hydstra::Varsub;
   
 __PACKAGE__->meta->error_class('Moose::Error::Croak');
 
