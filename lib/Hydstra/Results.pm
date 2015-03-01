@@ -105,8 +105,7 @@ sub variable{
   
   my %var = ( 
     'variables'=>1,
-    'variable_column'=>'3',
-    'variable_combined'=>1
+    'variable'=>{'column'=>'3','combined'=>1}
   );
   
   return \%var;

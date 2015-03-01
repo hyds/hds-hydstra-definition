@@ -164,8 +164,8 @@ sub variable{
   
   my %var = ( 
     'variables'=>2,
-    'varfrom_column'=>'1',
-    'varto_column'=>'2'
+    'varfrom'=>{'column'=>'1'},
+    'varto'=>{'column'=>'2'}
   );
   
   return \%var;

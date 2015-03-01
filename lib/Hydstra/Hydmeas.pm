@@ -112,15 +112,11 @@ sub variable{
   
   my %var = ( 
     'variables'=>1,
-    'variable_column'=>'5',
-    'variable_combined'=>1
+    'variable'=>{'column'=>'5','combined'=>1}
   );
   
   return \%var;
 }
-
-
-
 
 =head2 keys()
   

@@ -90,10 +90,9 @@ sub variable{
   
   my %var = ( 
     'variables'=>3,
-    'varfrom_column'=>'1',
-    'varto_column'=>'2',
-    'variable_column'=>'5'
-    'variable_combined'=>1
+    'varfrom'=>{'column'=>'1'},
+    'varto'=>{'column'=>'2'},
+    'variable'=>{'column'=>'5','combined'=>1}
   );
   
   return \%var;
