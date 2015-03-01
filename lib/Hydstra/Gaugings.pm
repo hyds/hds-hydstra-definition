@@ -134,6 +134,43 @@ subtype 'GaugingsEndsgh', as 'Num', where { length($_) <= 8 && $_ =~ m{[+-]?(\d{
 
 =head1 SUBROUTINES/METHODS
 
+
+
+=head2 variable()
+  
+  If the table has a variable column return the column number, and indicate whether or not it is a combined variable.
+  If the table has two variables, like varfrom and varto, you should give the columns;
+
+  There are many different options for a variable field. 
+
+  For examples:
+  1. combined = variable.subvariable
+    e.g. 100.01
+  2. uncombined = variable
+    e.g 100
+  3. from variable = varfrom
+    e.g. 100
+  4. subvariable = subvar
+    e.g. .01
+  etc.
+ 
+
+=cut
+  
+sub variable{
+
+  #our $VARIABLE_COLUMN = '3';
+  #our $COMBINED_VARIABLE = '1';
+  
+  my %var = ( 
+    'variables'=>2,
+    'varfrom_column'=>'1',
+    'varto_column'=>'2'
+  );
+  
+  return \%var;
+}
+
 =head2 keys()
   
   Find out what tables gaugings is a parent of.

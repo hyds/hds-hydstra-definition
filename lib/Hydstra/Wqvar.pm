@@ -13,11 +13,11 @@ use constant CHILD_OF => qw(  );
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 =head1 SYNOPSIS
 
@@ -25,6 +25,39 @@ our $VERSION = '0.01';
 
 =cut
 
+
+=head2 variable()
+  
+  If the table has a variable column return the column number, and indicate whether or not it is a combined variable.
+  There are many different options for a variable field. For examples:
+  1. combined = variable.subvariable
+    e.g. 100.01
+  2. uncombined = variable
+    e.g 100
+  3. from variable = varfrom
+    e.g. 100
+  4. subvariable = subvar
+    e.g. .01
+  etc.
+ 
+
+=cut
+  
+sub variable{
+
+  #our $VARIABLE_COLUMN = '0';
+  #our $SUBVAR_COLUMN = '1';
+  #our $COMBINED_VARIABLE = '0';
+
+  my %var = (
+    'variables'=>1,
+    'variable_column'=>'0',
+    'combined_variable'=>0,
+    'subvar_column'=>'1'
+  );
+  
+  return \%var;
+}
 
 
 =head1 SUBROUTINES/METHODS

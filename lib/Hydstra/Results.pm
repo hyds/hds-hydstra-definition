@@ -13,11 +13,12 @@ use constant CHILD_OF => qw( samples );
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
+
 
 =head1 SYNOPSIS
 
@@ -79,6 +80,38 @@ subtype 'ResultsAccuracy', as 'Num', where { length($_) <= 2 && $_ =~ m{[+-]?(\d
 
 
 =head1 SUBROUTINES/METHODS
+
+=head2 variable()
+  
+  If the table has a variable column return the column number, and indicate whether or not it is a combined variable.
+  There are many different options for a variable field. For examples:
+  1. combined = variable.subvariable
+    e.g. 100.01
+  2. uncombined = variable
+    e.g 100
+  3. from variable = varfrom
+    e.g. 100
+  4. subvariable = subvar
+    e.g. .01
+  etc.
+ 
+
+=cut
+  
+sub variable{
+
+  #our $VARIABLE_COLUMN = '3';
+  #our $COMBINED_VARIABLE = '1';
+  
+  my %var = ( 
+    'variables'=>1,
+    'variable_column'=>'3',
+    'variable_combined'=>1
+  );
+  
+  return \%var;
+}
+
 
 =head2 keys()
   

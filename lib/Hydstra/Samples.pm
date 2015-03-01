@@ -110,6 +110,35 @@ subtype 'SamplesUsercreate', as 'Str', where { length($_) <= 8 }, message{ my $l
 
 =head1 SUBROUTINES/METHODS
 
+
+=head2 variable()
+  
+  If the table has a variable column return the column number, and indicate whether or not it is a combined variable.
+  There are many different options for a variable field. For examples:
+  1. combined = variable.subvariable
+    e.g. 100.01
+  2. uncombined = variable
+    e.g 100
+  3. from variable = varfrom
+    e.g. 100
+  4. subvariable = subvar
+    e.g. .01
+  etc.
+
+=cut
+  
+sub variable{
+
+  
+  my %var = ( 
+    'variables'=>0
+  );
+  
+  return \%var;
+}
+
+
+
 =head2 keys()
   
   Find out what tables samples is a parent of.
